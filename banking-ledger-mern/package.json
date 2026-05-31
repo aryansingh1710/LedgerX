@@ -1,0 +1,17 @@
+{
+  "name": "banking-ledger-mern",
+  "version": "1.0.0",
+  "description": "Production-ready MERN Banking Ledger System with double-entry accounting",
+  "private": true,
+  "scripts": {
+    "install:all":  "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend":  "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "dev":          "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "seed":         "cd backend && npm run seed",
+    "build":        "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

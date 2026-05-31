@@ -1,0 +1,115 @@
+/* ─── Account Cards (Black & Neon Green Edition) ─────────────────────────── */
+.account-card {
+  /* Subtle diagonal gradient for a "Plastic Card" look */
+  background: linear-gradient(145deg, #0f0f0f, #000000);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px; /* Space thoda badhaya hai premium feel ke liye */
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card ke kone mein ek subtle green glow */
+.account-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.account-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 15px var(--color-primary-glow);
+}
+
+.account-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.account-type-badge {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 800;
+  color: #000; /* Black text on Green badge */
+  background: var(--color-primary);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 10px var(--color-primary-glow);
+}
+
+.account-balance {
+  font-family: var(--font-display);
+  font-size: 2rem; /* Thoda bada taaki main focus balance par rahe */
+  color: #ffffff;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.account-number {
+  font-family: 'Courier New', monospace; /* Banking card feel */
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+}
+
+/* ─── Account Row Cards (List View) ───────────────────────────────────────── */
+.accounts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.account-row-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all var(--transition);
+  flex-wrap: wrap;
+}
+
+.account-row-card:hover {
+  border-color: var(--color-primary-glow);
+  background: var(--color-surface-2);
+  transform: scale(1.01); /* Subtle grow effect */
+}
+
+.account-row-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.account-row-right {
+  text-align: right;
+}
+
+/* Neon Dot Effect */
+.account-type-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: var(--color-primary);
+  box-shadow: 0 0 10px var(--color-primary), 0 0 20px var(--color-primary-glow);
+}
